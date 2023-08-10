@@ -10,6 +10,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { LoadingComponent } from './componentes/loading/loading.component';
 import { PoketarjetitaComponent } from './componentes/poketarjetita/poketarjetita.component';
 import { PokeHeaderComponent } from './componentes/poke-header/poke-header.component';
+import { PokeFooterComponent } from './componentes/poke-footer/poke-footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PokeHeaderComponent } from './componentes/poke-header/poke-header.compo
     PokedexComponent,
     LoadingComponent,
     PoketarjetitaComponent,
-    PokeHeaderComponent
+    PokeHeaderComponent,
+    PokeFooterComponent
   ],
   imports: [
     BrowserModule,
