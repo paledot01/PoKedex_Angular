@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Pokemon-Font';
-    src: url('/assets/fonts/pokemon-font.ttf');
-    font-weight: normal;
-    font-style: normal;
+    src: url('assets/fonts/pokemon.ttf') format("truetype");
 }
 :root{
     --font-kevin: 'Calibre','Inter','San Francisco','SF Pro Text', sans-serif;
