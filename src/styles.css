@@ -21,7 +21,7 @@ body{
     margin: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    font-family: var(--font-pokemon);
+    font-family: var(--font-pokemon), var(--font-kevin-mono);
     font-size: 36px;
     color: var(--oscuro2);
     background-image: url(assets/imgs/fondo_01.png);

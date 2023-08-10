@@ -10,6 +10,7 @@
     border: 2px solid var(--oscuro2);
     cursor: pointer;
     .numero{
+        font-family: 'Pokemon-Font', 'SF Mono';
         line-height: 28px;
         margin: 2px 0 0 0;
     }
