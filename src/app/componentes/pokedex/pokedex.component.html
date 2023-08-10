@@ -1,0 +1,12 @@
+<app-loading *ngIf="!resultado; else viewPagina"></app-loading>
+
+<ng-template #viewPagina>
+    <ul>
+        <app-poketarjetita *ngFor="let item of resultado" [pokemon]="item"></app-poketarjetita>
+        <!--
+        <li *ngFor = "let numero of ids_pokemon">
+            <p *ngFor = "let item of resultado">{{item.name}}</p>
+            <img class="border" [ngSrc]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+numero+'.png'" alt="po" width="192" height="192">
+        </li>-->
+    </ul>
+</ng-template>

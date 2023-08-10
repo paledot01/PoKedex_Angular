@@ -1,0 +1,31 @@
+.tarjetita{
+    width: 120px;
+    height: 120px;
+    margin: 2px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;/*
+    outline: 2px solid var(--oscuro2);
+    outline-offset: -2px;*/
+    border: 2px solid var(--oscuro2);
+    cursor: pointer;
+    .numero{
+        line-height: 28px;
+        margin: 2px 0 0 0;
+    }
+    .pokebola{
+        image-rendering: pixelated;
+        margin: 2px 0 0 0;
+    }
+    .imagen{
+        image-rendering: pixelated;
+        position: relative;
+        top : -27px;
+        left: -10px;
+    }
+
+}
+.tarjetita:hover{
+    outline: solid 4px rgb(153, 29, 29);
+    outline-offset: -4px;
+}

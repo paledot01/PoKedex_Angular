@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Pokemon-Font';
+    src: url('/assets/fonts/pokemon-font.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    --font-kevin: 'Calibre','Inter','San Francisco','SF Pro Text', sans-serif;
+    --font-kevin-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono', monospace;
+    --font-pokemon: 'Pokemon-Font';
+    --blanco: #ccd6f6;
+    --verde: #82d649;
+    --verde_original: #6db33f;
+    --oscuro: #1b1f23;
+    --oscuro2: #383C45;
+    --fondo_red: #bd2110; /* 189, 33, 16 */
+    --text-opaco: rgb(148 163 184);
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-pokemon);
+    font-size: 36px;
+    color: var(--oscuro2);
+    background-image: url(assets/imgs/fondo_01.png);
+    background-repeat: repeat;
+}
