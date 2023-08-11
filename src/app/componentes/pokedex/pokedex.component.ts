@@ -9,8 +9,9 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class PokedexComponent implements OnInit, AfterViewInit{
 
+  private url_pagina: string = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20';
 
-  pagina: Pagina = {};
+  pagina: Pagina ={};
   resultado: Result[]|undefined = [];
   ids_pokemon: number[] = [];
   urlImagen: string = '';
@@ -18,22 +19,22 @@ export class PokedexComponent implements OnInit, AfterViewInit{
   constructor(private pokemonServicio: PokemonService){
   }
   ngOnInit(): void {
-    this.getPagina();
+    this.conseguirPagina();
     this.getOnePokemon();
   }
   ngAfterViewInit() {
     //this.listarPokemon();
   }
 
-  getPagina(): any{
-    this.pokemonServicio.getPagina().subscribe({
+  conseguirPagina(): any{
+    this.pokemonServicio.getPagina(this.url_pagina).subscribe({
       next: respuesta => {
         this.pagina = respuesta;
-        this.resultado = respuesta.results;
+        this.resultado = respuesta.results;/*
         respuesta.results?.forEach(x => {
           let id: string = x.url.substring(34, x.url.length - 1);
           this.ids_pokemon.push(parseInt(id));
-        });
+        });*/
         console.log(this.pagina);
         console.log(this.resultado);
         console.log(this.ids_pokemon);
@@ -41,6 +42,24 @@ export class PokedexComponent implements OnInit, AfterViewInit{
       },
       error: e => console.log(e)
     });
+  }
+
+  conseguirPaginaSiguiente(): any{
+    if(this.pagina.next == null){
+      return;
+    }else{
+      this.url_pagina = this.pagina.next;
+      this.conseguirPagina();
+    }
+  }
+
+  conseguirPaginaAnterior(): any{
+    if(this.pagina.previous == null){
+      return;
+    }else{
+      this.url_pagina = this.pagina.previous;
+      this.conseguirPagina();
+    }
   }
 
   getOnePokemon(): any{
@@ -53,16 +72,6 @@ export class PokedexComponent implements OnInit, AfterViewInit{
       },
       error: e => console.log(e)
     });
-  }
-  extraerNumeroPokemon(){
-    if(this.resultado){
-      this.resultado.forEach(x => {
-        let id: string = x.url.substring(34, x.url.length - 1);
-        this.ids_pokemon.push(parseInt(id));
-      });
-      console.log(this.ids_pokemon);
-      //this.id_pokemon = this.resultado.url.substring(34, this.resultado.url.length - 1);
-    }
   }
 
 }

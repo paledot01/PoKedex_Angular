@@ -1,3 +1,7 @@
+<div class="d-flex">
+    <input class="boton_flecha atras" type="button" value="" (click)="conseguirPaginaAnterior()">
+    <input class="boton_flecha adelante" type="button" value="" (click)="conseguirPaginaSiguiente()">
+</div>
 <div class="caja-pokemones d-flex flex-wrap">
     <app-poketarjetita class=""  *ngFor="let item of resultado" [pokemon]="item"></app-poketarjetita>
 </div>

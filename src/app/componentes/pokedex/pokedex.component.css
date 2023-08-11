@@ -1,3 +1,27 @@
+.boton_flecha{
+    width: 34px;
+    height: 36px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+.atras{
+    margin-left: 16px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+.atras:hover{
+    background-image: url(/assets/imgs/arrow_left.png);
+}
+.adelante{
+    margin-left: 14px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+.adelante:hover{
+    background-image: url(/assets/imgs/arrow_right.png);
+}
 .caja-pokemones{
-    margin: 35px 10px 10px;
+    margin: 4px 10px 10px;
 }

@@ -1,7 +1,7 @@
 export interface Pagina {
     count?:    number;
-    next?:     string;
-    previous?: null;
+    next?:     string|null;
+    previous?: string|null;
     results?:  Result[];
 }
 

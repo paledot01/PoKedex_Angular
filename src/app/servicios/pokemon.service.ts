@@ -9,12 +9,12 @@ import { Pagina } from '../model/pagina';
 export class PokemonService {
 
 
-  private url_pagina = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20';
+  //private url_pagina = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20';
   private url_pokemon = 'https://pokeapi.co/api/v2/pokemon/charizard';
   constructor(private httpCliente: HttpClient) { }
 
-  getPagina(): Observable<Pagina>{
-    return this.httpCliente.get<Pagina>(this.url_pagina);
+  getPagina(url_pagina: string): Observable<Pagina>{
+    return this.httpCliente.get<Pagina>(url_pagina);
   }
 
   getPokemon(): Observable<any>{
