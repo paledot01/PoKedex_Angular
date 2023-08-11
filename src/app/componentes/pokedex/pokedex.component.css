@@ -12,7 +12,7 @@
     image-rendering: pixelated;
 }
 .atras:hover{
-    background-image: url(/../../assets/imgs/arrow_left.png);
+    background-image: url("/assets/imgs/arrowLeft.png");
 }
 .adelante{
     margin-left: 14px;
@@ -20,7 +20,7 @@
     image-rendering: pixelated;
 }
 .adelante:hover{
-    background-image: url(/../../assets/imgs/arrow_right.png);
+    background-image: url("/assets/imgs/arrowRight.png");
 }
 .caja-pokemones{
     margin: 4px 10px 10px;
