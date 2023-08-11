@@ -1,6 +1,8 @@
 main{
-    width: 90%;
-    max-width: 650px;
-    margin: 30px;
-    background-color: beige;
+    margin: 100px auto;
+    width: 495px;
+    height: 426px;
+    background-image: url(/assets/imgs/ventana.png);
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
 }
