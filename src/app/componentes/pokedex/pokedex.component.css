@@ -1,6 +1,42 @@
+.busqueda{
+    margin-top: 6px;
+    height: 32px;
+    color: var(--blanco);
+    font-size: 28px;
+    .input_busqueda{
+        text-align: center;
+        margin-right: 6px;
+        margin-bottom: 4px;
+        line-height: 28px;
+        height: 28px;
+        width: 300px;
+        background: none;
+        border: none;
+        color: var(--blanco);/*
+        caret-shape: block;
+        caret-color: var(--verde);*/
+    }
+    .input_busqueda:focus{
+        outline: none;
+    }
+    .labels{
+        text-align: center;
+        margin-right: 6px;
+        width: 300px;
+        line-height: 28px;
+    }
+    .label_color{
+        width: 116px;
+        margin-right: 33px;
+    }
+    .label_tipo{
+        width: 123px;
+    }
+}
+
 .boton_flecha{
     width: 34px;
-    height: 36px;
+    height: 38px;
     border: none;
     padding: 0;
     margin: 0;
@@ -12,7 +48,7 @@
     image-rendering: pixelated;
 }
 .atras:hover{
-    background-image: url(../../../assets/imgs/arrowLeft.png);
+    background-image: url(../../../assets/imgs/arrowLeft2.png);
 }
 .adelante{
     margin-left: 14px;
@@ -20,7 +56,7 @@
     image-rendering: pixelated;
 }
 .adelante:hover{
-    background-image: url(../../../assets/imgs/arrowRight.png);
+    background-image: url(../../../assets/imgs/arrowRight2.png);
 }
 .caja-pokemones{
     margin: 4px 10px 10px;
