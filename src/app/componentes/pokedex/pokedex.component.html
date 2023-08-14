@@ -3,8 +3,10 @@
         <input class="input_busqueda" type="text" autocomplete="off" aria-autocomplete="none" placeholder="NAME OR ID">
     </div>
     <div class="labels d-flex">
-        <label class="label_color" for="input_busqueda">COLOR</label>
+        <label class="label_color" for="input_busqueda">COLOR</label><!-- disabled -->
+        <input class="boton_search_color" type="button" value="" (click)="openModal()">
         <label class="label_tipo" for="input_busqueda">FIGHTING</label>
+        <input class="boton_search_tipo" type="button" value="">
     </div>
 </div>
 
@@ -15,8 +17,11 @@
 <div class="caja-pokemones d-flex flex-wrap">
     <app-poketarjetita class=""  *ngFor="let item of resultado" [pokemon]="item"></app-poketarjetita>
 </div>
-<div class="d-flex justify-content-center">
-    <p>Color Type Name or ID</p>
+<!-- MODAL-CITO -->
+<div #modal class="modal">
+    <div class="modal_contenido">
+        <input class="modal_boton_cerrar" type="button" value="" (click)="closeModal()">
+    </div>
 </div>
 
 <!--

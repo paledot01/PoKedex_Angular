@@ -1,6 +1,6 @@
 import { Pagina, Result } from 'src/app/model/pagina';
 import { PokemonService } from './../../servicios/pokemon.service';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-pokedex',
@@ -11,12 +11,13 @@ export class PokedexComponent implements OnInit, AfterViewInit{
 
   private url_pagina: string = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20';
 
+  @ViewChild('modal') modal!: ElementRef;
   pagina: Pagina ={};
   resultado: Result[]|undefined = [];
   ids_pokemon: number[] = [];
   urlImagen: string = '';
 
-  constructor(private pokemonServicio: PokemonService){
+  constructor(private pokemonServicio: PokemonService, private renderer: Renderer2){
   }
   ngOnInit(): void {
     this.conseguirPagina();
@@ -72,6 +73,13 @@ export class PokedexComponent implements OnInit, AfterViewInit{
       },
       error: e => console.log(e)
     });
+  }
+
+  openModal(): void{
+    this.renderer.setStyle(this.modal.nativeElement, 'display', 'block');
+  }
+  closeModal(): void{
+    this.renderer.setStyle(this.modal.nativeElement, 'display', 'none');
   }
 
 }

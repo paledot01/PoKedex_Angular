@@ -14,7 +14,7 @@
     --fondo_red: #bd2110; /* 189, 33, 16 */
     --text-opaco: rgb(148 163 184);
 }
-body{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,9 +22,10 @@ body{
     font-family: var(--font-pokemon), var(--font-kevin-mono);
     font-size: 36px;
     color: var(--oscuro2);
+}
+body{
     background-image: url(assets/imgs/fondo_01.png);
     background-repeat: repeat;
-
 }/*
 * {
     cursor: url(http://labs.semplice.com/wp-content/uploads/2020/02/custom-cursor-arrow.png) 20 20, text;

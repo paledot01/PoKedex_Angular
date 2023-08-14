@@ -1,10 +1,10 @@
 .busqueda{
     margin-top: 6px;
     height: 32px;
-    color: var(--blanco);
     font-size: 28px;
     .input_busqueda{
         text-align: center;
+        text-transform: uppercase;
         margin-right: 6px;
         margin-bottom: 4px;
         line-height: 28px;
@@ -12,7 +12,8 @@
         width: 300px;
         background: none;
         border: none;
-        color: var(--blanco);/*
+        color: var(--blanco);
+        font-size: 28px;/*
         caret-shape: block;
         caret-color: var(--verde);*/
     }
@@ -26,11 +27,33 @@
         line-height: 28px;
     }
     .label_color{
-        width: 116px;
-        margin-right: 33px;
+        width: 117px;
+        font-size: 28px;
+        color: var(--blanco);
     }
     .label_tipo{
         width: 123px;
+        font-size: 28px;
+        color: var(--blanco);
+    }
+    .boton_search_color{
+        width: 28px;
+        height: 28px;
+        margin-right: 4px;
+        border: none;
+        background: none;
+    }
+    .boton_search_tipo{
+        width: 28px;
+        height: 28px;
+        border: none;
+        background: none;
+    }
+    .boton_search_color:hover{
+        background-color: var(--verde);
+    }
+    .boton_search_tipo:hover{
+        background-color: var(--verde);
     }
 }
 
@@ -38,8 +61,6 @@
     width: 34px;
     height: 38px;
     border: none;
-    padding: 0;
-    margin: 0;
     background: none;
 }
 .atras{
@@ -61,3 +82,71 @@
 .caja-pokemones{
     margin: 4px 10px 10px;
 }
+
+
+.modal{
+    display: none;
+    width: 487px;
+    height: 392px;
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+    top: 74px;
+    left: 4px;/*
+    box-shadow: 0 0 20px 0 rgba(165, 15, 15, 0.5);*/
+    background: rgba(50, 50, 50, 0.7);
+    .modal_contenido{
+        width: 293px;
+        height: 228px;
+        position: relative;
+        top: 67px;
+        left: 97px;
+        background-image: url(../../../assets/imgs/a1.png);
+        .modal_boton_cerrar{
+            width: 28px;
+            height: 36px;
+            position: absolute;
+            border: none;
+            top: 0;
+            right: 12px;
+            background: none;
+        }
+        .modal_boton_cerrar:hover{
+            background-color: red;
+        }
+    }
+}
+
+
+/*
+.consejo_ampliado{
+    display: none;
+    width: 100%;
+    height: 100%;
+    border:indigo 1px solid;
+    position:fixed;
+    overflow: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+    background: rgba(116, 77, 77, 0.452);
+    
+
+}
+.contenido_modal{
+    width: 700px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    background-color: aliceblue;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+    animation-name:modal;
+}
+@keyframes modal{
+	from{top:-330px; opacity:0;}
+	to{top:0; opacity:1;}
+}
+.consejo_ampliado img{
+    width: 700px;
+}*/
