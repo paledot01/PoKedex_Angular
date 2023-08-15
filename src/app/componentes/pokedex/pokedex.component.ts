@@ -12,10 +12,18 @@ export class PokedexComponent implements OnInit, AfterViewInit{
   private url_pagina: string = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20';
 
   @ViewChild('modal') modal!: ElementRef;
+  @ViewChild('modal_color') modalColor!: ElementRef;
+  @ViewChild('modal_tipo') modalTipo!: ElementRef;/*
+  @ViewChild('label_color') labelColor!: ElementRef;
+  @ViewChild('label_tipo') labelTipo!: ElementRef;*/
+
   pagina: Pagina ={};
   resultado: Result[]|undefined = [];
   ids_pokemon: number[] = [];
   urlImagen: string = '';
+
+  color: string = 'color';
+  tipo: string = 'type';
 
   constructor(private pokemonServicio: PokemonService, private renderer: Renderer2){
   }
@@ -75,11 +83,24 @@ export class PokedexComponent implements OnInit, AfterViewInit{
     });
   }
 
-  openModal(): void{
+  /* ==> Modal  */
+  openModalColor(): void{
     this.renderer.setStyle(this.modal.nativeElement, 'display', 'block');
+    this.renderer.setStyle(this.modalColor.nativeElement, 'display', 'block');
+  }
+  openModalTipo(): void{
+    this.renderer.setStyle(this.modal.nativeElement, 'display', 'block');
+    this.renderer.setStyle(this.modalTipo.nativeElement, 'display', 'block');
   }
   closeModal(): void{
     this.renderer.setStyle(this.modal.nativeElement, 'display', 'none');
+    this.renderer.setStyle(this.modalColor.nativeElement, 'display', 'none');
+    this.renderer.setStyle(this.modalTipo.nativeElement, 'display', 'none');
+    console.log(this.color);
+  }
+
+  seleccionarColor(): void{
+    console.log(this.color);
   }
 
 }

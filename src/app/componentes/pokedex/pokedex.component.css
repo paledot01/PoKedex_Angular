@@ -83,7 +83,7 @@
     margin: 4px 10px 10px;
 }
 
-
+/* =============================  MODAL  =================================== */
 .modal{
     display: none;
     width: 487px;
@@ -95,58 +95,79 @@
     left: 4px;/*
     box-shadow: 0 0 20px 0 rgba(165, 15, 15, 0.5);*/
     background: rgba(50, 50, 50, 0.7);
-    .modal_contenido{
+    .modal_contenido_color{
+        display: none;
         width: 293px;
         height: 228px;
         position: relative;
         top: 67px;
         left: 97px;
-        background-image: url(../../../assets/imgs/a1.png);
-        .modal_boton_cerrar{
-            width: 28px;
-            height: 36px;
+        background-image: url(../../../assets/imgs/modal_color.png);
+        /*input custom*/
+        .caja_inputs_color{
+            width: 226px;
+            height: 122px;
             position: absolute;
-            border: none;
-            top: 0;
-            right: 12px;
-            background: none;
+            top: 68px;
+            left: 33px;
+            .color_input{
+                display: none;
+                background: none;
+            }
+            .radio_image{
+                display: inline-block;
+                width: 42px;
+                height: 38px;
+                margin-right: 4px;
+                margin-bottom: 4px;
+                cursor: pointer;
+            }
+            .radio_image:hover{
+                background: url(../../../assets/imgs/select_color.png);
+            }
         }
-        .modal_boton_cerrar:hover{
-            background-color: red;
+    }
+    .modal_contenido_tipo{
+        display: none;
+        width: 293px;
+        height: 228px;
+        position: relative;
+        top: 67px;
+        left: 97px;
+        background-image: url(../../../assets/imgs/modal_tipo.png);
+        .caja_inputs_tipo{
+            width: 272px;
+            height: 160px;
+            position: absolute;
+            top: 48px;
+            left: 10px;
+            .tipo_input{
+                display: none;
+                background: none;
+            }
+            .radio_imagen_tipo{
+                display: inline-block;
+                width: 68px;
+                height: 32px;
+                margin-bottom: 0px;
+                cursor: pointer;
+            }
+            .radio_imagen_tipo:hover{
+                background: url(../../../assets/imgs/select_tipo.png);
+            }
         }
     }
 }
-
-
-/*
-.consejo_ampliado{
-    display: none;
-    width: 100%;
-    height: 100%;
-    border:indigo 1px solid;
-    position:fixed;
-    overflow: auto;
-    z-index: 1;
+.modal_boton_cerrar{
+    width: 28px;
+    height: 36px;
+    position: absolute;
+    border: none;
     top: 0;
-    left: 0;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
-    background: rgba(116, 77, 77, 0.452);
-    
-
+    right: 12px;
+    background: none;
 }
-.contenido_modal{
-    width: 700px;
-    position: relative;
-    top: 10%;
-    margin: auto;
-    background-color: aliceblue;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
-    animation-name:modal;
+.modal_boton_cerrar:hover{
+    background-image: url(../../../assets/imgs/select_close.png);
 }
-@keyframes modal{
-	from{top:-330px; opacity:0;}
-	to{top:0; opacity:1;}
-}
-.consejo_ampliado img{
-    width: 700px;
-}*/
+/* =============================  END MODAL  =================================== */

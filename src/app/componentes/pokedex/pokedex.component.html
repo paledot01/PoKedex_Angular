@@ -3,10 +3,10 @@
         <input class="input_busqueda" type="text" autocomplete="off" aria-autocomplete="none" placeholder="NAME OR ID">
     </div>
     <div class="labels d-flex">
-        <label class="label_color" for="input_busqueda">COLOR</label><!-- disabled -->
-        <input class="boton_search_color" type="button" value="" (click)="openModal()">
-        <label class="label_tipo" for="input_busqueda">FIGHTING</label>
-        <input class="boton_search_tipo" type="button" value="">
+        <label #label_color class="label_color" for="input_busqueda">{{color | uppercase}}</label><!-- disabled -->
+        <input class="boton_search_color" type="button" value="" (click)="openModalColor()">
+        <label #label_tipo class="label_tipo" for="input_busqueda">{{tipo | uppercase}}</label>
+        <input class="boton_search_tipo" type="button" value="" (click)="openModalTipo()">
     </div>
 </div>
 
@@ -17,10 +17,78 @@
 <div class="caja-pokemones d-flex flex-wrap">
     <app-poketarjetita class=""  *ngFor="let item of resultado" [pokemon]="item"></app-poketarjetita>
 </div>
+
 <!-- MODAL-CITO -->
 <div #modal class="modal">
-    <div class="modal_contenido">
+    <div #modal_color class="modal_contenido_color">
         <input class="modal_boton_cerrar" type="button" value="" (click)="closeModal()">
+        <div class="caja_inputs_color d-flex flex-wrap">
+            <input class="color_input" type="radio" name="colores" id="nada" value="color" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="nada"></label>
+            <input class="color_input" type="radio" name="colores" id="black" value="black" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="black"></label>
+            <input class="color_input" type="radio" name="colores" id="blue" value="blue" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="blue"></label>
+            <input class="color_input" type="radio" name="colores" id="brown" value="brown" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="brown"></label>
+            <input class="color_input" type="radio" name="colores" id="gray" value="gray" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image me-0" for="gray"></label>
+            <input class="color_input" type="radio" name="colores" id="green" value="green" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="green"></label>
+            <input class="color_input" type="radio" name="colores" id="pink" value="pink" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="pink"></label>
+            <input class="color_input" type="radio" name="colores" id="purple" value="purple" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="purple"></label>
+            <input class="color_input" type="radio" name="colores" id="red" value="red" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="red"></label>
+            <input class="color_input" type="radio" name="colores" id="white" value="white" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image me-0" for="white"></label>
+            <input class="color_input" type="radio" name="colores" id="yellow" value="yellow" [(ngModel)]="color" (click)="closeModal()">
+            <label class="radio_image" for="yellow"></label>
+        </div>
+    </div>
+    <div #modal_tipo class="modal_contenido_tipo">
+        <input class="modal_boton_cerrar" type="button" value="" (click)="closeModal()">
+        <div class="caja_inputs_tipo d-flex flex-wrap">
+            <input class="tipo_input" type="radio" name="tipos" id="type" value="type" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="type"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="normal" value="normal" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="normal"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="fighting" value="fighting" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="fighting"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="flying" value="flying" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="flying"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="poison" value="poison" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="poison"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="ground" value="ground" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="ground"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="rock" value="rock" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="rock"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="bug" value="bug" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="bug"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="ghost" value="ghost" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="ghost"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="steel" value="steel" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="steel"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="fire" value="fire" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="fire"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="water" value="water" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="water"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="grass" value="grass" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="grass"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="electric" value="electric" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="electric"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="psychic" value="psychic" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="psychic"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="ice" value="ice" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="ice"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="dragon" value="dragon" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="dragon"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="dark" value="dark" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="dark"></label>
+            <input class="tipo_input" type="radio" name="tipos" id="fairy" value="fairy" [(ngModel)]="tipo" (click)="closeModal()">
+            <label class="radio_imagen_tipo" for="fairy"></label>
+        </div>
     </div>
 </div>
 

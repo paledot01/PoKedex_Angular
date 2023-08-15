@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokedexComponent } from './componentes/pokedex/pokedex.component';
 import { HttpClientModule } from '@angular/common/http' // <----- agregado
-import { ReactiveFormsModule } from '@angular/forms'; // <----- agregado
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <----- agregado
 import { NgOptimizedImage } from '@angular/common';
 import { LoadingComponent } from './componentes/loading/loading.component';
 import { PoketarjetitaComponent } from './componentes/poketarjetita/poketarjetita.component';
@@ -26,6 +26,7 @@ import { PokeFooterComponent } from './componentes/poke-footer/poke-footer.compo
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule, // <----- agregado para los formularios
     NgOptimizedImage // <----- agregado para las imagenes
   ],
   providers: [],
