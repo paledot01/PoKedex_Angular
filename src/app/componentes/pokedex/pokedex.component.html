@@ -1,11 +1,12 @@
 <div class="busqueda d-flex flex-column align-items-end">
     <div class="d-flex">
-        <input class="input_busqueda" type="text" autocomplete="off" aria-autocomplete="none" placeholder="NAME OR ID">
+        <input class="boton_buscar" type="button" value="" (click)="buscarPokemon()">
+        <input class="input_busqueda" type="text" autocomplete="off" aria-autocomplete="none" placeholder="NAME OR ID" [(ngModel)]="nombre_pokemon">
     </div>
     <div class="labels d-flex">
-        <label #label_color class="label_color" for="input_busqueda">{{color | uppercase}}</label><!-- disabled -->
+        <label #label_color class="label_color">{{color | uppercase}}</label><!-- disabled -->
         <input class="boton_search_color" type="button" value="" (click)="openModalColor()">
-        <label #label_tipo class="label_tipo" for="input_busqueda">{{tipo | uppercase}}</label>
+        <label #label_tipo class="label_tipo">{{tipo | uppercase}}</label>
         <input class="boton_search_tipo" type="button" value="" (click)="openModalTipo()">
     </div>
 </div>
@@ -15,7 +16,7 @@
     <input class="boton_flecha adelante" type="button" value="" (click)="conseguirPaginaSiguiente()">
 </div>
 <div class="caja-pokemones d-flex flex-wrap">
-    <app-poketarjetita class=""  *ngFor="let item of resultado" [pokemon]="item"></app-poketarjetita>
+    <app-poketarjetita class=""  *ngFor="let n of ids_pokemones" [id_pokemon]="n"></app-poketarjetita>
 </div>
 
 <!-- MODAL-CITO -->

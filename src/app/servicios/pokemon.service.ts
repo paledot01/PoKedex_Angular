@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Pagina } from '../model/pagina';
+import { Color } from '../model/color';
+import { Pokemon } from '../model/pokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +17,10 @@ export class PokemonService {
 
   getPagina(url_pagina: string): Observable<Pagina>{
     return this.httpCliente.get<Pagina>(url_pagina);
+  }
+
+  getPokemonForColor(color: string, url: string): Observable<Pokemon[]>{
+    return this.httpCliente.get<Pokemon[]>(url+color).pipe(map((data: any) => data.pokemon_species));
   }
 
   getPokemon(): Observable<any>{

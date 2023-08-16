@@ -2,7 +2,7 @@ main{
     margin: 60px auto;
     width: 495px;
     height: 470px;
-    background-image: url(../assets/imgs/ventana_4.png);
+    background-image: url(../assets/imgs/ventana_main.png);
     background-repeat: no-repeat;
     image-rendering: pixelated;
     position: relative;/* para el minimodal */

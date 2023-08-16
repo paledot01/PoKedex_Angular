@@ -1,7 +1,19 @@
+/* ########## BUSQUEDA ########### */
 .busqueda{
     margin-top: 6px;
     height: 32px;
     font-size: 28px;
+    .boton_buscar{
+        width: 120px;
+        height: 28px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        border: none;
+        background: none;
+    }
+    .boton_buscar:hover{
+        background-image: url(../../../assets/imgs/buscar.png);
+    }
     .input_busqueda{
         text-align: center;
         text-transform: uppercase;
@@ -17,7 +29,11 @@
         caret-shape: block;
         caret-color: var(--verde);*/
     }
+    .input_busqueda:hover{
+        background-image: url(../../../assets/imgs/buscar_input.png);
+    }
     .input_busqueda:focus{
+        background-image: url(../../../assets/imgs/buscar_input.png);
         outline: none;
     }
     .labels{
@@ -27,19 +43,21 @@
         line-height: 28px;
     }
     .label_color{
-        width: 117px;
+        width: 111px;
+        margin-right: 2px;
         font-size: 28px;
         color: var(--blanco);
     }
     .label_tipo{
-        width: 123px;
+        width: 117px;
+        margin-right: 2px;
         font-size: 28px;
         color: var(--blanco);
     }
     .boton_search_color{
         width: 28px;
         height: 28px;
-        margin-right: 4px;
+        margin-right: 8px;
         border: none;
         background: none;
     }
@@ -50,13 +68,15 @@
         background: none;
     }
     .boton_search_color:hover{
-        background-color: var(--verde);
+        background-image: url(../../../assets/imgs/buscar_abrir_modal.png);
     }
     .boton_search_tipo:hover{
-        background-color: var(--verde);
+        background-image: url(../../../assets/imgs/buscar_abrir_modal.png);
     }
 }
+/* ########## END BUSQUEDA ########### */
 
+/* ::::::  MAIN ::::::  */
 .boton_flecha{
     width: 34px;
     height: 38px;
@@ -82,6 +102,8 @@
 .caja-pokemones{
     margin: 4px 10px 10px;
 }
+/* ::::::  END MAIN ::::::  */
+
 
 /* =============================  MODAL  =================================== */
 .modal{

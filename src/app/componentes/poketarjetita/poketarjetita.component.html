@@ -1,8 +1,8 @@
-<div *ngIf="pokemon" class="tarjetita">
+<div *ngIf="id_pokemon" class="tarjetita">
     <div class="d-flex justify-content-center align-items-center border">
         <img class="me-2 pokebola" src="assets/imgs/pokebola_2.png" alt="" width="24" height="24">
-        <p class="numero">{{id | number:'3.0-0'}}</p><!-- {{pokemon.name}} -->
+        <p class="numero">{{id_pokemon | number:'3.0-0'}}</p><!-- {{pokemon.name}} -->
     </div>
-    <img class="imagen" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/{{id}}.png' alt="" width="80" height="60">
+    <img class="imagen" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/{{id_pokemon}}.png' alt="" width="80" height="60">
 </div>
 
