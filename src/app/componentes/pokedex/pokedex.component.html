@@ -15,9 +15,13 @@
     <input class="boton_flecha atras" type="button" value="" (click)="conseguirPaginaAnterior()">
     <input class="boton_flecha adelante" type="button" value="" (click)="conseguirPaginaSiguiente()">
 </div>
-<div class="caja-pokemones d-flex flex-wrap">
-    <app-poketarjetita class=""  *ngFor="let n of ids_pokemones" [id_pokemon]="n"></app-poketarjetita>
+<div class="caja_pokemones">
+    <div class="d-flex flex-wrap">
+        <app-poketarjetita class=""  *ngFor="let n of ids_pokemones" [id_pokemon]="n"></app-poketarjetita>
+        <p *ngIf="mensaje">{{mensaje}}</p>
+    </div>
 </div>
+
 
 <!-- MODAL-CITO -->
 <div #modal class="modal">
@@ -93,6 +97,10 @@
     </div>
 </div>
 
+<!-- Paginacion -->
+<div class="paginacion">
+    <p>{{pagina_actual+1}}/{{total_paginas}}</p>
+</div>
 <!--
 <app-loading *ngIf="!resultado; else viewPagina"></app-loading>
 

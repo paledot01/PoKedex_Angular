@@ -23,6 +23,14 @@ export class PokemonService {
     return this.httpCliente.get<Pokemon[]>(url+color).pipe(map((data: any) => data.pokemon_species));
   }
 
+  getPokemonForTipo(tipo: string, url: string): Observable<Pokemon[]>{
+    return this.httpCliente.get<Pokemon[]>(url+tipo).pipe(map((data: any) => data.pokemon.map((pokemon: any) => pokemon.pokemon)));
+  }
+
+  getPokemonForNombreId(nombre: string, url: string): Observable<any>{
+    return this.httpCliente.get<any>(url+nombre).pipe(map((data: any) => data.id));
+  }
+
   getPokemon(): Observable<any>{
     return this.httpCliente.get<any>(this.url_pokemon);
   }

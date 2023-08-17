@@ -99,8 +99,16 @@
 .adelante:hover{
     background-image: url(../../../assets/imgs/arrowRight2.png);
 }
-.caja-pokemones{
+.caja_pokemones{
+    width: 475px;
+    height: 380px;
     margin: 4px 10px 10px;
+    & p {
+        text-align: center;
+        line-height: 30px;
+        max-width: 95px;
+        max-height: 95px;
+    }
 }
 /* ::::::  END MAIN ::::::  */
 
@@ -193,3 +201,14 @@
     background-image: url(../../../assets/imgs/select_close.png);
 }
 /* =============================  END MODAL  =================================== */
+
+.paginacion{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    & p{
+        color: var(--blanco);
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+}
