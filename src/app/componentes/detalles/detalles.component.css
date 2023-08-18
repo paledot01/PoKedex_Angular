@@ -1,0 +1,15 @@
+.detalle{
+    width: 495px;
+    height: 470px;
+    background-color: antiquewhite;
+    & p{
+        line-height: 30px;
+        margin: 0;
+        padding: 0;
+    }
+    & img{
+        width: 40%;
+        height: auto;
+        image-rendering: pixelated;
+    }
+}

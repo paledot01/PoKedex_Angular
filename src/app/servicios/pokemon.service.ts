@@ -4,6 +4,7 @@ import { Observable, map } from 'rxjs';
 import { Pagina } from '../model/pagina';
 import { Color } from '../model/color';
 import { Pokemon } from '../model/pokemon';
+import { PokemonComplete } from '../model/pokemonComplete';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,12 @@ import { Pokemon } from '../model/pokemon';
 export class PokemonService {
 
 
-  //private url_pagina = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20';
   private url_pokemon = 'https://pokeapi.co/api/v2/pokemon/charizard';
+
   constructor(private httpCliente: HttpClient) { }
 
-  getPagina(url_pagina: string): Observable<Pagina>{
+  
+  getPokemonesAll(url_pagina: string): Observable<Pagina>{
     return this.httpCliente.get<Pagina>(url_pagina);
   }
 
@@ -27,8 +29,9 @@ export class PokemonService {
     return this.httpCliente.get<Pokemon[]>(url+tipo).pipe(map((data: any) => data.pokemon.map((pokemon: any) => pokemon.pokemon)));
   }
 
-  getPokemonForNombreId(nombre: string, url: string): Observable<any>{
-    return this.httpCliente.get<any>(url+nombre).pipe(map((data: any) => data.id));
+  getPokemonForNombreId(nombre: string, url: string): Observable<PokemonComplete>{
+    //return this.httpCliente.get<any>(url+nombre).pipe(map((data: any) => data.id));
+    return this.httpCliente.get<PokemonComplete>(url+nombre);
   }
 
   getPokemon(): Observable<any>{

@@ -1,6 +1,12 @@
+.pokedex{
+    background-image: url(../../../assets/imgs/ventana_main.png);
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    padding-top: 6px;
+}
 /* ########## BUSQUEDA ########### */
-.busqueda{
-    margin-top: 6px;
+.busqueda{/*
+    margin-top: 6px;*/
     height: 32px;
     font-size: 28px;
     .boton_buscar{
@@ -103,7 +109,9 @@
     width: 475px;
     height: 380px;
     margin: 4px 10px 10px;
-    & p {
+    .mensaje_error {
+        position: relative;
+        top: 14px;
         text-align: center;
         line-height: 30px;
         max-width: 95px;
@@ -203,10 +211,9 @@
 /* =============================  END MODAL  =================================== */
 
 .paginacion{
-    display: flex;
-    justify-content: end;
     margin-right: 10px;
     & p{
+        text-align: end;
         color: var(--blanco);
         font-size: 28px;
         letter-spacing: 3px;

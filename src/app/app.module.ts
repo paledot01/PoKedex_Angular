@@ -11,6 +11,7 @@ import { LoadingComponent } from './componentes/loading/loading.component';
 import { PoketarjetitaComponent } from './componentes/poketarjetita/poketarjetita.component';
 import { PokeHeaderComponent } from './componentes/poke-header/poke-header.component';
 import { PokeFooterComponent } from './componentes/poke-footer/poke-footer.component';
+import { DetallesComponent } from './componentes/detalles/detalles.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PokeFooterComponent } from './componentes/poke-footer/poke-footer.compo
     LoadingComponent,
     PoketarjetitaComponent,
     PokeHeaderComponent,
-    PokeFooterComponent
+    PokeFooterComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,
