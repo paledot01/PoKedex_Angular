@@ -5,8 +5,9 @@ import { DetallesComponent } from './componentes/detalles/detalles.component';
 
 const routes: Routes = [
   {path: 'home', component : PokedexComponent},
-  { path: 'detalle/:id', component: DetallesComponent },
+  {path: 'detalle/:id', component: DetallesComponent },
   {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({

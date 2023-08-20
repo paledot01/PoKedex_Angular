@@ -1,7 +1,7 @@
 .detalle{
     width: 495px;
     height: 470px;
-    background-image: url(../../../assets/imgs/detalle.png);
+    background-image: url(../../../assets/imgs/ventana_detalle.png);
     background-repeat: no-repeat;
     image-rendering: pixelated;
     .superior{
@@ -9,11 +9,11 @@
         height: 70px;
         .atras{
             text-decoration: none;
-            width: 90px;
+            width: 95px;
             height: 70px;
         }
         .atras:hover{
-            background-color: var(--verde);
+            background-image: url(../../../assets/imgs/atras.png);
         }
     }
     .principal{
@@ -50,10 +50,8 @@
                 margin: 13px 0 0 8px;
             }
             .tipo{
-                margin: 14px 0 0 82px;/*
-                background-image: url(../../../assets/imgs/.png);*/
-                & p{
-                    border: 1px solid var(--verde);
+                margin: 14px 0 0 82px;
+                & div{
                     width: 64px;
                     height: 28px;
                     margin-right: 8px;

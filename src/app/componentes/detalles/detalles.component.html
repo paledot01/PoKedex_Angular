@@ -16,7 +16,8 @@
 
             <p class="especies">{{especie | uppercase }}</p>
             <div class="tipo d-flex">
-                <p *ngFor="let y of pokemon_completo.types">{{y.type.name}}</p>
+                <div *ngFor="let y of tipos" [ngStyle]="{ 'background-image': y }">
+                </div>
             </div>
             <div class="altura_peso d-flex">
                 <p class="altura">{{altura}} m</p>

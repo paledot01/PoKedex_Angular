@@ -67,15 +67,7 @@ export class PokedexComponent implements OnInit, AfterViewInit{
       error: e => console.log(e)
     });
   }
-/*   ids_pokemones: number[] = [];
-  ids_pokemones_full: number[] = [];
-  total_paginas: number = 65;
-  pagina_actual: number = 0; */
 
-  /*
-    1. cunado se selecciona un color, y le das en siguiente pag antes de buscar se bugea
-    2. 
-  */
   conseguirPokemonesPorColor():any{
     let list: number[] = [];
     this.pokemonServicio.getPokemonForColor(this.color, this.url_color).subscribe({
