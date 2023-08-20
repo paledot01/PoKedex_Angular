@@ -17,7 +17,6 @@ export class PokedexComponent implements OnInit, AfterViewInit{
   private url_tipo: string = 'https://pokeapi.co/api/v2/type/';
   private url_nombre_id: string = 'https://pokeapi.co/api/v2/pokemon/';
   //private url_pokemon: string = 'https://pokeapi.co/api/v2/pokemon/pikachu';
-  private url_pokemon_descripcion: string = 'https://pokeapi.co/api/v2/pokemon-species/pikachu';
 
   @ViewChild('modal') modal!: ElementRef;
   @ViewChild('modal_color') modalColor!: ElementRef;

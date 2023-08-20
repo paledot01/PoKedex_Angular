@@ -1,11 +1,30 @@
 <div class="detalle">
-    <img class="imagen" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/{{id}}.gif' alt="">
-    <p>id:{{id}}</p>
-    <p>nombre</p>
-    <p>especie</p>
-    <p>tipo</p>
-    <p>altura</p>
-    <p>peso</p>
-    <p>descripcion</p>
-    <li><a [routerLink]="['/home']">Atras -></a></li>
+    <div class="superior d-flex justify-content-end">
+        <a class="atras" [routerLink]="['/home']"></a>
+    </div>
+    <div class="principal d-flex">
+        <div class="box_imagen d-flex justify-content-center align-items-end">
+            <div>
+                <img class="imagen" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/{{id}}.gif' alt="imagen_pokemon">
+            </div>
+        </div>
+        <div class="detalles">
+            <div class="d-flex ms-3">
+                <p class="id_pokemon">{{id | number:'3.0-0'}}</p>
+                <p class="nombre_pokemon">{{pokemon_completo.name | uppercase}}</p>
+            </div>
+
+            <p class="especies">{{especie | uppercase }}</p>
+            <div class="tipo d-flex">
+                <p *ngFor="let y of pokemon_completo.types">{{y.type.name}}</p>
+            </div>
+            <div class="altura_peso d-flex">
+                <p class="altura">{{altura}} m</p>
+                <p>{{peso}} kg</p>
+            </div>
+        </div>
+    </div>
+    <div class="descripcion">
+        <p>{{descripcion}}</p>
+    </div>
 </div>
