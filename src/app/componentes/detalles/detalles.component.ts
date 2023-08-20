@@ -39,7 +39,7 @@ export class DetallesComponent implements OnInit{
         this.altura = this.pokemon_completo.height!/10;
         this.peso = this.pokemon_completo.weight!/10;
         respuesta.types?.forEach(x => {
-          list.push('url(../../../assets/imgs/tipos/'+x.type.name+'.png)');
+          list.push('url(assets/imgs/tipos/'+x.type.name+'.png)');
         });
         this.tipos = list;
         console.log(this.pokemon_completo);
