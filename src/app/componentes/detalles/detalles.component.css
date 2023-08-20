@@ -1,7 +1,7 @@
 .detalle{
     width: 495px;
     height: 470px;
-    background-image: url(../../../assets/imgs/ventana_detalle.png);
+    background-image: url(../../../assets/imgs/detalle.png);
     background-repeat: no-repeat;
     image-rendering: pixelated;
     .superior{
@@ -71,7 +71,7 @@
         }
     }
     .descripcion{
-        padding: 14px 45px 0px;
+        padding: 12px 45px 0px;
     }
 }
 p{

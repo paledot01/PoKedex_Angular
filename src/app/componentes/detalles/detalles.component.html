@@ -16,8 +16,7 @@
 
             <p class="especies">{{especie | uppercase }}</p>
             <div class="tipo d-flex">
-                <div *ngFor="let y of tipos" [ngStyle]="{ 'background-image': y }">
-                </div>
+                <div *ngFor="let y of tipos" [ngStyle]="{ 'background-image': y }"></div>
             </div>
             <div class="altura_peso d-flex">
                 <p class="altura">{{altura}} m</p>
