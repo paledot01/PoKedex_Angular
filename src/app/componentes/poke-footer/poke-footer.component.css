@@ -1,11 +1,45 @@
+
+/* -- FOOTER -- */
 .pie{
-    height: 50px;
-    background-color: rgba(30, 30, 30, .8);
-    color: var(--blanco);
-    text-align: center;
-    border: 1px solid white;
-    .titulo{
-        line-height: 28px;
-        margin: 10px;
+    background-color: rgba(10, 10, 10, 0.7);
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+.git{
+    width: 35px;
+    fill: rgb(200, 200, 200);
+    animation: meneo 1s 0.5s linear infinite;
+    transition: 0.5s;
+}
+.git:hover{
+    fill: rgb(90, 198, 239);
+}
+.git_mensaje{
+    color: var(--blanco);    
+    font-size: 18px;
+    line-height: 18px;
+}
+
+@keyframes meneo {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
     }
 }

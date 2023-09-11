@@ -1,4 +1,5 @@
 <div class="pokedex">
+    <!-- BUSQUEDA -->
     <div class="busqueda d-flex flex-column align-items-end">
         <div class="d-flex">
             <input class="boton_buscar" type="button" value="" (click)="buscarPokemon()">
@@ -11,18 +12,18 @@
             <input class="boton_search_tipo" type="button" value="" (click)="openModalTipo()">
         </div>
     </div>
-    
+    <!-- PAGINA SIGUIENTE -->
     <div class="d-flex">
         <input #anterior class="boton_flecha atras" type="button" value="" (click)="conseguirPaginaAnterior()">
         <input #siguiente class="boton_flecha adelante" type="button" value="" (click)="conseguirPaginaSiguiente()">
     </div>
+    <!-- CAJA DE POKEMONES -->
     <div class="caja_pokemones">
         <div class="d-flex flex-wrap">
             <app-poketarjetita [routerLink]="['/detalle', n]" *ngFor="let n of ids_pokemones" [id_pokemon]="n"></app-poketarjetita>
             <p *ngIf="mensaje" class="mensaje_error">{{mensaje}}</p>
         </div>
     </div>
-    
     
     <!-- MODAL-CITO -->
     <div #modal class="modal">

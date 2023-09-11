@@ -42,8 +42,8 @@ export class DetallesComponent implements OnInit{
           list.push('url(assets/imgs/tipos/'+x.type.name+'.png)');
         });
         this.tipos = list;
-        console.log(this.pokemon_completo);
-        console.log(this.tipos);
+        //console.log(this.pokemon_completo);
+        //console.log(this.tipos);
       },
       error: e => { 
         console.log(e);
@@ -56,7 +56,7 @@ export class DetallesComponent implements OnInit{
       next: respuesta => {
         this.especie = respuesta.genera.find((x:any) => x.language.name === 'es').genus;
         this.descripcion = respuesta.flavor_text_entries.find((x:any) => x.language.name === 'es').flavor_text;
-        console.log(respuesta);
+        //console.log(respuesta);
       },
       error: e => { 
         console.log(e);
