@@ -1,6 +1,9 @@
 # Proyecto PoKedex | :eye:[Live Preview][video_url]
 Proyecto, página web de consumo de API [pokeapi.co][pokeapi_url] con Angular.
-![][img_4]
+|  |
+| :-------------: |
+| ![][img_4] |
+
 Contenido:
 - Lista de todos los pokemones.
 - Detalle de cada pokemon.
@@ -22,7 +25,7 @@ Contenido:
 | ![][img_4] | ![][img_5] | |   
 
 ### Nota:
-- Los sprites para los tipos de los pokemones son de internet, todos los demas sprites son propios y para su creacion se usaron de referencia sus videojuegos.
+- Los sprites para los tipos de los pokemones son de internet, todos los demas sprites son propios y para su creacion se usaron de referencia, sus videojuegos.
 
 [img_1]: ./src/assets/imgs/screenshot/p17_img1.webp
 [img_2]: ./src/assets/imgs/screenshot/p17_img2.webp
